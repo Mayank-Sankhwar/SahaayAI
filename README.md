@@ -1,130 +1,54 @@
-# SahaayAI
-Helping people in places with low internet connectivity in getting answers to their queries through 24/7 AI call .
+# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Telephone%20Receiver.png" alt="Telephone" width="45" height="45" /> SahaayAI 
 
-🎙️ SahaayAI: Multilingual Voice-to-Call Assistant
+> **Bridging the Digital Divide:** Providing 24/7 AI-driven intelligence to low-connectivity areas through the power of a simple phone call.
 
-SahaayAI is an intelligent bridge between digital information and accessibility. It allows users to speak queries in their native language via a web interface and receive answers through a direct phone call and SMS, powered by real-time web scraping and machine learning.
+<div align="center">
+  <img src="https://capsule-render.vercel.app/render?type=soft&color=auto&height=200&section=header&text=SahaayAI&fontSize=80&animation=fadeIn&fontAlignY=38" width="100%" />
+</div>
 
-🚀 Features
+<p align="center">
+  <a href="#-mission">Mission</a> •
+  <a href="#-features">Features</a> •
+  <a href="#-how-it-works">Architecture</a> •
+  <a href="#-tech-stack">Tech Stack</a> •
+  <a href="#-installation--setup">Setup</a>
+</p>
 
-🎤 Multilingual Voice Input
-A simple mic-enabled web interface that captures queries in various native languages.
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge&logo=github" />
+  <img src="https://img.shields.io/badge/Connectivity-Low_Bandwidth-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Language-Multilingual-blue?style=for-the-badge" />
+</p>
 
-🌐 Web-Scraping Intelligence
-Automatically scrapes the web for real-time information, focused on Government Schemes and general user interests.
+---
 
-🧠 AI Voice Synthesis
-Processes extracted data through an ML model to generate natural-sounding responses.
+## 🎙️ The Mission
+In regions where high-speed internet is a luxury, information remains locked behind digital barriers. **SahaayAI** acts as an intelligent bridge, allowing users to speak their queries in their native tongue and receive answers via a traditional phone call—turning any mobile phone into a gateway to global knowledge.
 
-📞 Automated Call-Back
-Triggers an AI bot to call the user's registered mobile number and deliver the response verbally.
+---
 
-📩 SMS Integration
-Sends a text summary of the answer to the user for future reference.
+## 🚀 Features
 
-🛠️ Tech Stack
-Component	Technology
-Frontend	React.js / HTML5 / Tailwind CSS
-Backend	Node.js
-Language Detection	Efficient Language Detector (ELD)
-ML / Web Scraping	Tavily
-Telephony	Twilio API (Voice & SMS)
-LLM	Gemini (Query Processing)
-⚙️ How It Works
+| Feature | Description |
+| :--- | :--- |
+| **🎤 Native Voice Input** | Capture queries effortlessly through a mic-enabled web interface. |
+| **🌐 Real-time Intelligence** | Dynamic web-scraping focused on Government Schemes and local news. |
+| **🧠 Neural Synthesis** | Natural-sounding AI voice responses that feel human, not robotic. |
+| **📞 Seamless Call-Back** | Automatic VoIP triggers deliver answers directly to the user's handset. |
+| **📩 SMS Summaries** | Persistent text records sent immediately after the call ends. |
 
-Capture
-User clicks the mic button on the Web UI and asks a question
-Example: “What are the benefits of the PM-Kisan scheme?”
+---
 
-Translate & Process
-The ML pipeline converts speech to text, detects the language, and extracts intent.
+## ⚙️ How It Works
 
-Search
-The system performs a targeted web scrape to fetch accurate and up-to-date information.
-
-Execute Call
-The backend triggers a VoIP service to call the user's registered mobile number.
-
-Voice & Text Delivery
-
-The user hears the response in their native language over the phone
-
-An SMS with written details is sent at the end of the call
-
-📋 Prerequisites
-
-Before running this project, ensure you have:
-
-Node.js (Frontend & Backend)
-
-API Keys for:
-
-Twilio (Voice & SMS)
-
-Gemini (LLM)
-
-Tavily (Web Search)
-
-🛠️ Installation & Setup
-1️⃣ Clone the Repository
-git clone https://github.com/yourusername/voicequery-ai.git
-cd voicequery-ai
-
-2️⃣ Install Backend Dependencies
-npm install
-
-3️⃣ Install Frontend Dependencies
-cd client
-npm install
-
-4️⃣ Environment Variables
-
-Create a .env file in the root directory:
-
-TWILIO_ACCOUNT_SID=your_sid
-TWILIO_AUTH_TOKEN=your_token
-GEMINI_API_KEY=your_key
-TAVILY_API_KEY=your_key
-
-5️⃣ Run the Application
-
-Start Backend
-
-npm start
-
-
-Start Frontend
-
-cd client
-npm start
-
-🛡️ Use Cases
-
-Digital Inclusion
-Helping elderly or non-tech-savvy users access government information without typing.
-
-Agriculture
-Farmers querying crop insurance or weather-related schemes in regional languages.
-
-Education
-Students asking general knowledge questions on the go.
-
-📌 Future Enhancements
-
-Call recording & transcripts
-
-Offline SMS fallback
-
-Regional dialect tuning
-
-Android & IVR support
-
-🤝 Contributing
-
-Pull requests are welcome. For major changes, please open an issue first.
-
-📄 License
-
-This project is licensed under the MIT License.
-
-❓ Need More?
+```mermaid
+graph LR
+    A[🎙️ User Speech] --> B(Language Detection)
+    B --> C{🧠 Gemini LLM}
+    C --> D[🌐 Tavily Search]
+    D --> E(🔊 Voice Synthesis)
+    E --> F[📞 Twilio Call/SMS]
+    F --> G[📱 User Mobile]
+    
+    style C fill:#6E40C9,stroke:#fff,stroke-width:2px,color:#fff
+    style G fill:#238636,stroke:#fff,stroke-width:2px,color:#fff
